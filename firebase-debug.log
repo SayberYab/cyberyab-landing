@@ -1,62 +1,97 @@
-[debug] [2022-10-13T03:47:24.120Z] ----------------------------------------------------------------------
-[debug] [2022-10-13T03:47:24.122Z] Command:       /home/mohammad/.nvm/versions/node/v16.14.0/bin/node /home/mohammad/.nvm/versions/node/v16.14.0/bin/firebase init hosting
-[debug] [2022-10-13T03:47:24.123Z] CLI Version:   11.14.2
-[debug] [2022-10-13T03:47:24.123Z] Platform:      linux
-[debug] [2022-10-13T03:47:24.124Z] Node Version:  v16.14.0
-[debug] [2022-10-13T03:47:24.124Z] Time:          Thu Oct 13 2022 07:17:24 GMT+0330 (Iran Standard Time)
-[debug] [2022-10-13T03:47:24.124Z] ----------------------------------------------------------------------
+[debug] [2022-10-13T07:44:44.140Z] ----------------------------------------------------------------------
+[debug] [2022-10-13T07:44:44.142Z] Command:       /home/mohammad/.nvm/versions/node/v16.14.0/bin/node /home/mohammad/.nvm/versions/node/v16.14.0/bin/firebase deploy --only hosting
+[debug] [2022-10-13T07:44:44.142Z] CLI Version:   11.14.2
+[debug] [2022-10-13T07:44:44.142Z] Platform:      linux
+[debug] [2022-10-13T07:44:44.143Z] Node Version:  v16.14.0
+[debug] [2022-10-13T07:44:44.153Z] Time:          Thu Oct 13 2022 11:14:44 GMT+0330 (Iran Standard Time)
+[debug] [2022-10-13T07:44:44.153Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2022-10-13T03:47:24.133Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2022-10-13T03:47:24.133Z] > authorizing via signed-in user (mirfatemi7@gmail.com)
+[debug] [2022-10-13T07:44:44.212Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-13T07:44:44.213Z] > authorizing via signed-in user (mirfatemi7@gmail.com)
+[debug] [2022-10-13T07:44:44.213Z] [iam] checking project sayberyab for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-13T07:44:44.216Z] > refreshing access token with scopes: []
+[debug] [2022-10-13T07:44:44.217Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-13T07:44:44.217Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-13T07:44:45.166Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-10-13T07:44:45.166Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-13T07:44:45.177Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sayberyab:testIamPermissions [none]
+[debug] [2022-10-13T07:44:45.177Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sayberyab:testIamPermissions x-goog-quota-user=projects/sayberyab
+[debug] [2022-10-13T07:44:45.177Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sayberyab:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-13T07:44:47.441Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sayberyab:testIamPermissions 200
+[debug] [2022-10-13T07:44:47.441Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sayberyab:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-13T07:44:47.442Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sayberyab [none]
+[debug] [2022-10-13T07:44:48.208Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sayberyab 200
+[debug] [2022-10-13T07:44:48.210Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sayberyab {"projectId":"sayberyab","projectNumber":"28235688933","displayName":"Sayberyab","name":"projects/sayberyab","resources":{"hostingSite":"sayberyab"},"state":"ACTIVE","etag":"1_27de85e5-4e70-4b4a-9ed7-2255364a5a4c"}
 [info] 
-     ######## #### ########  ######## ########     ###     ######  ########
-     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
-     ######    ##  ########  ######   ########  #########  ######  ######
-     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
-     ##       #### ##     ## ######## ########  ##     ##  ######  ########
-
-You're about to initialize a Firebase project in this directory:
-
-  /home/mohammad/Desktop/cyberyab-landing
-
+[info] === Deploying to 'sayberyab'...
 [info] 
-=== Project Setup
-[info] 
-[info] First, let's associate this project directory with a Firebase project.
-[info] You can create multiple project aliases by running firebase use --add, 
-[info] but for now we'll just set up a default project.
-[info] 
-[debug] [2022-10-13T03:47:25.593Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
-[debug] [2022-10-13T03:47:26.575Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
-[debug] [2022-10-13T03:47:26.575Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
-[info] i  Using project sayberyab (Sayberyab) 
-[info] 
-=== Hosting Setup
-[info] 
-[info] Your public directory is the folder (relative to your project directory) that
-[info] will contain Hosting assets to be uploaded with firebase deploy. If you
-[info] have a build process for your assets, use your build's output directory.
-[info] 
-[info] ✔  Wrote public/404.html 
-[debug] [2022-10-13T03:48:08.042Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
-[debug] [2022-10-13T03:48:08.698Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
-[debug] [2022-10-13T03:48:08.698Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.12.1","browserURL":"https://www.gstatic.com/firebasejs/9.12.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.12.1/firebase.tgz"},"live":{"version":"9.12","browserURL":"https://www.gstatic.com/firebasejs/live/9.12/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.12/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.12.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.12.1/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.12.1/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.12.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.12.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.12.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.12.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.12.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.12.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.12.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.memory.js"}}
-[info] ✔  Wrote public/index.html 
-[info] 
-[info] i  Detected a .git folder at /home/mohammad/Desktop/cyberyab-landing 
-[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
-[info] 
-[info] Visit this URL on this device to log in:
-[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=956055580&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
-[info] 
-[info] Waiting for authentication...
-[debug] [2022-10-13T03:48:18.680Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
-[debug] [2022-10-13T03:48:18.681Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
-[debug] [2022-10-13T03:48:19.641Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
-[debug] [2022-10-13T03:48:19.641Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
-[debug] [2022-10-13T03:48:19.655Z] >>> [apiv2][query] GET https://api.github.com/user [none]
-[debug] [2022-10-13T03:48:20.716Z] <<< [apiv2][status] GET https://api.github.com/user 200
-[debug] [2022-10-13T03:48:20.716Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"kiumad","id":29664113,"node_id":"MDQ6VXNlcjI5NjY0MTEz","avatar_url":"https://avatars.githubusercontent.com/u/29664113?v=4","gravatar_id":"","url":"https://api.github.com/users/kiumad","html_url":"https://github.com/kiumad","followers_url":"https://api.github.com/users/kiumad/followers","following_url":"https://api.github.com/users/kiumad/following{/other_user}","gists_url":"https://api.github.com/users/kiumad/gists{/gist_id}","starred_url":"https://api.github.com/users/kiumad/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/kiumad/subscriptions","organizations_url":"https://api.github.com/users/kiumad/orgs","repos_url":"https://api.github.com/users/kiumad/repos","events_url":"https://api.github.com/users/kiumad/events{/privacy}","received_events_url":"https://api.github.com/users/kiumad/received_events","type":"User","site_admin":false,"name":"Mohammad Mirfatemi","company":"Yektanet","blog":"mirfatemi.ir","location":"Tehran","email":"mirfatemi7@gmail.com","hireable":true,"bio":"Frontend Developer","twitter_username":"kiumad","public_repos":9,"public_gists":0,"followers":22,"following":17,"created_at":"2017-06-23T18:05:10Z","updated_at":"2022-09-17T09:10:00Z","private_gists":0,"total_private_repos":19,"owned_private_repos":19,"disk_usage":555069,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
-[info] 
-[info] ✔  Success! Logged into GitHub as kiumad 
-[info] 
+[info] i  deploying hosting 
+[debug] [2022-10-13T07:44:48.216Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sayberyab/versions [none]
+[debug] [2022-10-13T07:44:48.216Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sayberyab/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-10-13T07:44:50.197Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sayberyab/versions 200
+[debug] [2022-10-13T07:44:50.197Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sayberyab/versions {"name":"projects/28235688933/sites/sayberyab/versions/0e973221447b4ee4","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[sayberyab]: beginning deploy... 
+[info] i  hosting[sayberyab]: found 24 files in public 
+[debug] [2022-10-13T07:44:50.211Z] [hosting] uploading with 200 concurrency
+[debug] [2022-10-13T07:44:50.255Z] [hosting] hash cache [cHVibGlj] stored for 24 files
+[debug] [2022-10-13T07:44:50.255Z] [hosting][hash queue][FINAL] {"max":32,"min":0,"avg":6.958333333333333,"active":0,"complete":24,"success":24,"errored":0,"retried":0,"total":24,"elapsed":38}
+[debug] [2022-10-13T07:44:50.256Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/28235688933/sites/sayberyab/versions/0e973221447b4ee4:populateFiles [none]
+[debug] [2022-10-13T07:44:50.256Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/28235688933/sites/sayberyab/versions/0e973221447b4ee4:populateFiles {"files":{"/404.html":"b7bab6b83fa074653ff28c8d2a64135d3434575f70a12ab3d3ba8080461b9537","/app.js":"f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec","/cNqv6yVEWKxWcW2qv-l8s2xwVTHZbEImnVoHT0waqHc":"7943038dbc1ccb975494896dc1fc070e31035486af2844e4c51d4f890df91596","/fontiran.css":"b7eeaae1183e60671d82612c56bf82dc4e75d015d2b0cb4bc955d815a287a96a","/.well-known/acme-challenge/cNqv6yVEWKxWcW2qv-l8s2xwVTHZbEImnVoHT0waqHc":"7943038dbc1ccb975494896dc1fc070e31035486af2844e4c51d4f890df91596","/style/fonts/woff/Morabba-Bold.woff":"59250b4ca8dd30f1a7c99d7eda628c01c3b83c59a6b175ad042c29dbbc8b372c","/style/fonts/woff/Morabba-Heavy.woff":"f25ecda696ed0c3f46d3f60d0c5542133cb00dec5f131f995977dd40d6f5c1da","/style/fonts/woff/Morabba-Regular.woff":"6a2769fc16e7242d0d778a9fe485047e5020d313d45e08c2a6e019661a9c0f3b","/style/fonts/woff/Morabba-UltraLight.woff":"1a7b47f0b8c078c2875799f1c3f5e01bcb8c5844bdab51f0842efd301821bd3d","/style/fonts/woff2/Morabba-Bold.woff2":"72f7b1d4f70f23e35fd52815b256d795b8845dde5035e047723e85908f47a664","/style/fonts/woff2/Morabba-Heavy.woff2":"2d94f5ee7b1dcdf749fe3e1318ea3a998f7d783e7228129efff05c2ffdd64334","/style/fonts/woff2/Morabba-Regular.woff2":"d12cfafd498b65dd726099f11259f83481a6c891f7415dd01778b3c0ef7e565e","/style/fonts/woff2/Morabba-UltraLight.woff2":"fe04929f226848c812add53d4e1bc3a731b06a34b5477cd169094fb9ef8a76eb","/woff/IRANYekanX-Bold.woff":"7cbdc04cac909eff896f1001cbbd138d6226ae70012bdd853137e298a08e8e4f","/woff/IRANYekanX-Regular.woff":"7903b19f38cbba576f988c99f540fe5d8e44ea6c5c18574f6eb49ce7a3d6415a","/woff2/IRANYekanX-Bold.woff2":"af38e686e3c8272fa7ec6abb5eda7a08c3973e9a92d7eb003d756226de3b7ef5","/woff2/IRANYekanX-Regular.woff2":"f9442e6f491cd6befef38013c6be991b1988c4e44fbe850a6688933921165d94","/index.html":"8441102df8fb044bd1d955339ad283bfc0f03462952c1866cb73844f1898d3df","/style.css":"4658f33a5bfc08086c0600e4df3d2309aeca4753dee5c5d4f0f2828bdae7e2ea","/images/gummy-abacus.png":"147a7991ff51e906fccc93d68c934f3436fc0b0883e2c31122dea3a4eea7452e","/images/gummy-programming.png":"26c0a85f36f2f611354c2c32b3f4584476fd3218fffdfea534662a0f4303862b","/images/gummy-coffee.png":"712344b6763ddda181ee8201c2ee53f04c706765355e344b97dc9f7713d9b853","/images/gummy-work-from-home.png":"95bc259a11132bece14067897222c921a5ab19a289870d503716587b5cb0cab8","/images/gummy-chemistry-lab.png":"09746f9291a8e7d6aed26d60b050592cf103428ff1a757e35a106d67c28beac4"}}
+[debug] [2022-10-13T07:44:51.718Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/28235688933/sites/sayberyab/versions/0e973221447b4ee4:populateFiles 200
+[debug] [2022-10-13T07:44:51.718Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/28235688933/sites/sayberyab/versions/0e973221447b4ee4:populateFiles {"uploadRequiredHashes":["712344b6763ddda181ee8201c2ee53f04c706765355e344b97dc9f7713d9b853","4658f33a5bfc08086c0600e4df3d2309aeca4753dee5c5d4f0f2828bdae7e2ea","09746f9291a8e7d6aed26d60b050592cf103428ff1a757e35a106d67c28beac4","95bc259a11132bece14067897222c921a5ab19a289870d503716587b5cb0cab8","147a7991ff51e906fccc93d68c934f3436fc0b0883e2c31122dea3a4eea7452e","26c0a85f36f2f611354c2c32b3f4584476fd3218fffdfea534662a0f4303862b","8441102df8fb044bd1d955339ad283bfc0f03462952c1866cb73844f1898d3df"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files"}
+[debug] [2022-10-13T07:44:51.724Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/712344b6763ddda181ee8201c2ee53f04c706765355e344b97dc9f7713d9b853 [none]
+[debug] [2022-10-13T07:44:51.725Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/712344b6763ddda181ee8201c2ee53f04c706765355e344b97dc9f7713d9b853 [stream]
+[debug] [2022-10-13T07:44:51.728Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/4658f33a5bfc08086c0600e4df3d2309aeca4753dee5c5d4f0f2828bdae7e2ea [none]
+[debug] [2022-10-13T07:44:51.728Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/4658f33a5bfc08086c0600e4df3d2309aeca4753dee5c5d4f0f2828bdae7e2ea [stream]
+[debug] [2022-10-13T07:44:51.730Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/09746f9291a8e7d6aed26d60b050592cf103428ff1a757e35a106d67c28beac4 [none]
+[debug] [2022-10-13T07:44:51.730Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/09746f9291a8e7d6aed26d60b050592cf103428ff1a757e35a106d67c28beac4 [stream]
+[debug] [2022-10-13T07:44:51.732Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/95bc259a11132bece14067897222c921a5ab19a289870d503716587b5cb0cab8 [none]
+[debug] [2022-10-13T07:44:51.733Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/95bc259a11132bece14067897222c921a5ab19a289870d503716587b5cb0cab8 [stream]
+[debug] [2022-10-13T07:44:51.735Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/147a7991ff51e906fccc93d68c934f3436fc0b0883e2c31122dea3a4eea7452e [none]
+[debug] [2022-10-13T07:44:51.736Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/147a7991ff51e906fccc93d68c934f3436fc0b0883e2c31122dea3a4eea7452e [stream]
+[debug] [2022-10-13T07:44:51.738Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/26c0a85f36f2f611354c2c32b3f4584476fd3218fffdfea534662a0f4303862b [none]
+[debug] [2022-10-13T07:44:51.739Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/26c0a85f36f2f611354c2c32b3f4584476fd3218fffdfea534662a0f4303862b [stream]
+[debug] [2022-10-13T07:44:51.742Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/8441102df8fb044bd1d955339ad283bfc0f03462952c1866cb73844f1898d3df [none]
+[debug] [2022-10-13T07:44:51.742Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/8441102df8fb044bd1d955339ad283bfc0f03462952c1866cb73844f1898d3df [stream]
+[debug] [2022-10-13T07:44:51.744Z] [hosting][populate queue][FINAL] {"max":1470,"min":1470,"avg":1470,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1490}
+[debug] [2022-10-13T07:44:51.744Z] [hosting] uploads queued: 7
+[debug] [2022-10-13T07:44:54.168Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/26c0a85f36f2f611354c2c32b3f4584476fd3218fffdfea534662a0f4303862b 200
+[debug] [2022-10-13T07:44:54.169Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/26c0a85f36f2f611354c2c32b3f4584476fd3218fffdfea534662a0f4303862b [stream]
+[debug] [2022-10-13T07:44:54.299Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/147a7991ff51e906fccc93d68c934f3436fc0b0883e2c31122dea3a4eea7452e 200
+[debug] [2022-10-13T07:44:54.300Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/147a7991ff51e906fccc93d68c934f3436fc0b0883e2c31122dea3a4eea7452e [stream]
+[debug] [2022-10-13T07:44:54.347Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/4658f33a5bfc08086c0600e4df3d2309aeca4753dee5c5d4f0f2828bdae7e2ea 200
+[debug] [2022-10-13T07:44:54.348Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/4658f33a5bfc08086c0600e4df3d2309aeca4753dee5c5d4f0f2828bdae7e2ea [stream]
+[debug] [2022-10-13T07:44:54.508Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/8441102df8fb044bd1d955339ad283bfc0f03462952c1866cb73844f1898d3df 200
+[debug] [2022-10-13T07:44:54.508Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/8441102df8fb044bd1d955339ad283bfc0f03462952c1866cb73844f1898d3df [stream]
+[debug] [2022-10-13T07:44:54.593Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/95bc259a11132bece14067897222c921a5ab19a289870d503716587b5cb0cab8 200
+[debug] [2022-10-13T07:44:54.594Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/95bc259a11132bece14067897222c921a5ab19a289870d503716587b5cb0cab8 [stream]
+[debug] [2022-10-13T07:44:54.617Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/712344b6763ddda181ee8201c2ee53f04c706765355e344b97dc9f7713d9b853 200
+[debug] [2022-10-13T07:44:54.618Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/712344b6763ddda181ee8201c2ee53f04c706765355e344b97dc9f7713d9b853 [stream]
+[debug] [2022-10-13T07:44:54.677Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/09746f9291a8e7d6aed26d60b050592cf103428ff1a757e35a106d67c28beac4 200
+[debug] [2022-10-13T07:44:54.677Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/sayberyab/versions/0e973221447b4ee4/files/09746f9291a8e7d6aed26d60b050592cf103428ff1a757e35a106d67c28beac4 [stream]
+[debug] [2022-10-13T07:44:54.678Z] [hosting][upload queue][FINAL] {"max":2956,"min":2446,"avg":2737.5714285714284,"active":0,"complete":7,"success":7,"errored":0,"retried":0,"total":7,"elapsed":2959}
+[info] ✔  hosting[sayberyab]: file upload complete 
+[debug] [2022-10-13T07:44:54.679Z] [hosting] deploy completed after 4480ms
+[debug] [2022-10-13T07:44:54.684Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "sayberyab"
+    },
+    "version": "projects/28235688933/sites/sayberyab/versions/0e973221447b4ee4"
+  }
+]
+[info] i  hosting[sayberyab]: finalizing version... 
+[debug] [2022-10-13T07:44:54.692Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sayberyab/versions/0e973221447b4ee4 updateMask=status%2Cconfig
+[debug] [2022-10-13T07:44:54.692Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sayberyab/versions/0e973221447b4ee4 {"status":"FINALIZED","config":{}}
+[debug] [2022-10-13T07:44:56.134Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sayberyab/versions/0e973221447b4ee4 200
+[debug] [2022-10-13T07:44:56.135Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sayberyab/versions/0e973221447b4ee4 {"name":"projects/28235688933/sites/sayberyab/versions/0e973221447b4ee4","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-10-13T07:44:49.699182Z","createUser":{"email":"mirfatemi7@gmail.com"},"finalizeTime":"2022-10-13T07:44:55.948665Z","finalizeUser":{"email":"mirfatemi7@gmail.com"}}
+[debug] [2022-10-13T07:44:56.135Z] [hosting] finalized version for sayberyab:[object Object]
+[info] ✔  hosting[sayberyab]: version finalized 
+[info] i  hosting[sayberyab]: releasing new version... 
+[debug] [2022-10-13T07:44:56.136Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sayberyab/channels/live/releases versionName=projects%2F28235688933%2Fsites%2Fsayberyab%2Fversions%2F0e973221447b4ee4
