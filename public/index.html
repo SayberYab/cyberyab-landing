@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="black">
+    <link rel="canonical" href="https://sayberyab.com/" />
+    <meta name="url" content="https://sayberyab.com/">
+    <meta name="identifier-URL" content="https://sayberyab.com/">
+    <meta name="revisit-after" content="1 days">
+    <meta name="og:title" content="سایبریاب" />
+    <meta name="og:type" content="website" />
+    <meta name="og:url" content="https://sayberyab.com/" />
+    <meta name="og:image" content="http://ia.media-imdb.com/rock.jpg" />
+    <meta name="og:site_name" content="SayberYab - سایبریاب" />
+    <meta name="og:description"
+        content="Find suspicious and unsafe accounts in #Filternet and be more careful about them." />
+    <meta name="og:email" content="salam@sayberyab.com" />
+    <meta name="tweetmeme-title" content="SayberYab - سایبریاب" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="./images/icon72.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/icon72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/icon114.png" />
+    <link rel="apple-touch-icon" type="image/png" href="./images/icon114.png" />
+    <link rel="shortcut icon" type="image/ico" href="./images/icon.ico" />
+    <link rel="fluid-icon" type="image/png" href="./images/icon114.png" />
+    <meta name="description"
+        content="Find suspicious and unsafe accounts in #Filternet and be more careful about them." />
+    <meta name="keywords" content="chrome extention , sayberyab , cyberyab , internet tool , iran internet , twitter" />
     <link rel="stylesheet" href="style.css">
     <title>سایبریاب</title>
 </head>
 
 <body>
-    <!-- <div class="header-wrapper flex-row-center"> -->
     <header class="flex-row-between">
         <div class="container flex-row-between">
             <a href="/">
@@ -18,9 +42,15 @@
             </a>
             <nav>
                 <ul class="flex-row-between">
-                    <li>نسخه ها</li>
-                    <li>مرورگر ها</li>
-                    <li>ارتباط با ما</li>
+                    <a href="/help">
+                        <li>آموزش استفاده</li>
+                    </a>
+                    <a href="https://github.com/SayberYab">
+                        <li>Open Source (github)</li>
+                    </a>
+                    <a href="/about-us">
+                        <li>درباره ما</li>
+                    </a>
                 </ul>
             </nav>
         </div>
@@ -182,7 +212,6 @@
         </footer>
     </div>
     <script>
-        console.log("ddd");
         const ThemeToggle = document.querySelector(".switch input");
         const Themestatus = window.localStorage.getItem("theme") || null;
         if (!Themestatus || Themestatus === null) {
@@ -193,7 +222,6 @@
         if (Themestatus && Themestatus === "dark") dark();
 
         ThemeToggle.addEventListener("change", function () {
-            console.log("Ddd");
             if (ThemeToggle.checked === false) light();
             if (ThemeToggle.checked === true) dark();
         });
@@ -208,49 +236,6 @@
             ThemeToggle.checked = true;
             document.querySelector(":root").classList.add("dark");
         }
-
-    </script>
-    <script type="module">
-
-        // Import the functions you need from the SDKs you need
-
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
-
-        // TODO: Add SDKs for Firebase products that you want to use
-
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-
-        // Your web app's Firebase configuration
-
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-        const firebaseConfig = {
-
-            apiKey: "AIzaSyB7H_mG3tajq5IY1QwSfvPfZfge2S77DR4",
-
-            authDomain: "sayberyab.firebaseapp.com",
-
-            projectId: "sayberyab",
-
-            storageBucket: "sayberyab.appspot.com",
-
-            messagingSenderId: "28235688933",
-
-            appId: "1:28235688933:web:46fdcc97bc92d1023b1d0c",
-
-            measurementId: "G-ENXR66EP51"
-
-        };
-
-
-        // Initialize Firebase
-
-        const app = initializeApp(firebaseConfig);
-
-        const analytics = getAnalytics(app);
 
     </script>
 </body>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>سایبریاب - درباره ما</title>
+</head>
+
+<body>
+    <header class="flex-row-between">
+        <div class="container flex-row-between">
+            <a href="/">
+                <div class="logo">سایبریاب</div>
+            </a>
+            <nav>
+                <ul class="flex-row-between">
+                    <a href="/help">
+                        <li>آموزش استفاده</li>
+                    </a>
+                    <a href="https://github.com/SayberYab">
+                        <li>Open Source (github)</li>
+                    </a>
+                    <a href="/about-us">
+                        <li>درباره ما</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <div class="flex-row-between" style="gap: 15px;">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <div class="get-extention">دریافت افزونه</div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <main class="flex-column">
+            <div class="long-text-wrapper flex-column-start">
+                <div class="long-text-wrapper-cover">
+                    <img src="../images/luke-chesser-zFaSM1hz02c-unsplash.jpg" alt="">
+                </div>
+                <h1>درباره ما</h1>
+                <p>سایبریاب یک پروژه open-source است و تمام عزیزانی که در بهتر شدن آن در <a
+                        href="https://github.com/SayberYab">گیتهاب</a> کمک میکنند عضوی از تیم ما هستند
+                </p>
+                <p>هدف تمام ما مشخص است ، ما خواستار فضایی امن و آزاد در اینترنت هستیم و همواره در این مسیر تلاش میکنیم
+                    و امیدواریم که بتوانیم با دریافت نظرات با ارزش مخاطبانمان در این مسیر هر روز پر قدرت تر رو به جلو
+                    حرکت کنیم</p>
+                <p>
+                    برای با خبر شدن از آخرین اخبار سایبریاب ، مارا در <a href="https://twitter.com/sayberyab">توویتر</a>
+                    دنبال کنید
+                </p>
+            </div>
+            <section class="send-email-wrapper flex-row-between">
+                <span>از طریق ایمیل با ما در ارتباط باشید.</span>
+                <a class="send-email-wrapper-button flex-row" href="mailto: salam@sayberyab.com">salam@sayberyab.com</a>
+            </section>
+        </main>
+        <footer class="flex-row-between">
+            <span>توسعه داده شده با عشق ، <a href="https://github.com/kiumad" target="_blank"
+                    style="color: rgb(60, 88, 248);">Mohammad
+                    Mirfatemi</a></span>
+            <a href="https://github.com/SayberYab" style="color: gray;"><span>Github Repository</span></a>
+        </footer>
+    </div>
+
+    <script>
+        const ThemeToggle = document.querySelector(".switch input");
+        const Themestatus = window.localStorage.getItem("theme") || null;
+        if (!Themestatus || Themestatus === null) {
+            window.localStorage.setItem("theme", "dark");
+            light();
+        }
+        if (Themestatus && Themestatus === "light") light();
+        if (Themestatus && Themestatus === "dark") dark();
+
+        ThemeToggle.addEventListener("change", function () {
+            if (ThemeToggle.checked === false) light();
+            if (ThemeToggle.checked === true) dark();
+        });
+
+        function light() {
+            window.localStorage.setItem("theme", "light");
+            ThemeToggle.checked = false;
+            document.querySelector(":root").classList.remove("dark");
+        }
+        function dark() {
+            window.localStorage.setItem("theme", "dark");
+            ThemeToggle.checked = true;
+            document.querySelector(":root").classList.add("dark");
+        }
+
+    </script>
+</body>
+
+</html>
